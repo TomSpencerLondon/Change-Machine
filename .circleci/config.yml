@@ -13,6 +13,9 @@ jobs:
       - image: circleci/ruby:2.6.3-stretch-node
     steps: 
       - checkout
+      - run:
+          name: update bundler
+          command: bundle update --bundler
       - run: 
           name: Which bundler?
           command: bundle -v
